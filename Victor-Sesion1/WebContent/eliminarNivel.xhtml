@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" >
+
+	<h:head></h:head>
+	<h:body>
+			<h:form>
+		<p:dataTable value="#{nivel.nivelesmodel}" var="n" border="1">
+		<f:facet name="header">Modificar de Usuarios</f:facet>
+		<p:column headerText="IdNivel">
+		 #{n.idnivel}
+		</p:column>
+		<p:column headerText="DesNivel">
+		#{n.niveldes}
+		</p:column>
+		<p:column headerText="">
+		<h:commandLink value="Eliminar" action="SUCCESS" actionListener="#{nivel.eliminarNivel}">
+		<f:attribute name="nidnivel" value="#{n.idnivel}"></f:attribute>
+		</h:commandLink>
+		</p:column>
+		</p:dataTable>
+		<p:commandLink value="Regresar al Menu" action="SUCCESS"></p:commandLink>
+		
+		
+
+		</h:form>
+											
+		</h:body>
+</html>

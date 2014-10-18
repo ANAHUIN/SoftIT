@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" >
+
+	<h:head></h:head>
+	<h:body>
+		<h:form>
+		
+		<p:dataTable value="#{articulo.articulosmodel}" var="a" border="1" editable="true">
+		<f:facet name="header">Articulos</f:facet>
+		<p:column headerText="Código">
+		#{a.artcod}
+		</p:column>
+		<p:column headerText="Nombre">
+		#{a.artnom}	
+		</p:column>
+		<p:column headerText="Precio">
+		#{a.artpre}
+		</p:column>
+		<p:column headerText="Stock">
+		#{a.artstk}	
+		</p:column>
+		<p:column headerText="Unidad">
+		#{a.artuni}
+		</p:column>
+		<p:column headerText="Marca">
+		#{a.marca.idmarca}	
+		</p:column>
+		<p:column headerText="Model">
+<p:cellEditor>
+ <f:facet name="output">
+ <h:outputText value="#{articulo.artcantidad}" />
+ </f:facet>
+ <f:facet name="input">
+ <h:inputText value="#{articulo.artcantidad}"/>
+ </f:facet>
+ </p:cellEditor>
+</p:column>
+<p:column>
+<p:rowEditor />
+</p:column>
+
+		
+	
+		<p:column headerText="Comprar">
+		<p:commandLink value="Comprar" action="SUCCESS" actionListener="#{articulo.ventaArticulo}">
+		<f:attribute name="codigo" value="#{a.artcod}" ></f:attribute>
+			<f:attribute name="stock" value="#{a.artstk}" ></f:attribute>
+					<f:attribute name="cantidad" value="#{articulo.artcantidad}" ></f:attribute>
+		</p:commandLink>
+		</p:column>
+		</p:dataTable>
+		
+			<p:panelGrid columns="2" >
+		<f:facet name="header">Alta Artículo</f:facet>
+			<h:outputText value="Códgio"></h:outputText>
+			<p:inputText value="#{articulo.artcod}"></p:inputText>
+			
+			<h:outputText value="Nombre"></h:outputText>
+			<p:inputText value="#{articulo.artnom}"></p:inputText>
+			
+		
+			<h:outputText value="Precio"></h:outputText>
+			<p:inputText value="#{articulo.artpre}"></p:inputText>
+			
+			<h:outputText value="Stock"></h:outputText>
+			<p:inputText value="#{articulo.artstk}"></p:inputText>
+			
+			<h:outputText value="Unidad"></h:outputText>
+			<p:inputText value="#{articulo.artuni}"></p:inputText>
+			
+			<h:outputText value="Marca"></h:outputText>
+			<h:selectOneMenu value="#{articulo.idmarca}">
+			<f:selectItems value="#{marca.marcaSelectItems}"></f:selectItems>
+			</h:selectOneMenu>
+			
+			
+			<p:commandButton value="Grabar"  action="SUCCESS" actionListener="#{articulo.altaArticulo}" ></p:commandButton>
+					
+		</p:panelGrid>
+		
+			<p:commandLink value="Regresar al Menu" action="SUCCESS"></p:commandLink>
+		
+		</h:form>
+											
+		</h:body>
+</html>

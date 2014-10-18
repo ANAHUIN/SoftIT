@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+    version="2.0">
+
+	<managed-bean>
+		<managed-bean-name>usuario</managed-bean-name>
+		<managed-bean-class>edu.victor.jsf.UsuarioJSF</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	
+		<managed-bean>
+		<managed-bean-name>nivel</managed-bean-name>
+		<managed-bean-class>edu.victor.jsf.NivelJSF</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	
+			<managed-bean>
+		<managed-bean-name>articulo</managed-bean-name>
+		<managed-bean-class>edu.victor.jsf.ArticuloJSF</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	
+			<managed-bean>
+		<managed-bean-name>marca</managed-bean-name>
+		<managed-bean-class>edu.victor.jsf.MarcaJSF</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+
+	<navigation-rule>
+	
+		<navigation-case>
+			<from-outcome>SUCCESS</from-outcome>
+			<to-view-id>/menu.xhtml</to-view-id>
+		</navigation-case>
+	
+		<navigation-case>
+			<from-outcome>REGISTRARSE</from-outcome>
+			<to-view-id>/registroUsuario.xhtml</to-view-id>
+		</navigation-case>
+		
+		<navigation-case>
+			<from-outcome>Logueo</from-outcome>
+			<to-view-id>/logueo.xhtml</to-view-id>
+		</navigation-case>
+	
+			<navigation-case>
+			<from-outcome>Alta</from-outcome>
+			<to-view-id>/altaUsuario.xhtml</to-view-id>
+		</navigation-case>
+		
+			<navigation-case>
+			<from-outcome>Eliminar</from-outcome>
+			<to-view-id>/eliminarUsuario.xhtml</to-view-id>
+		</navigation-case>
+		
+			<navigation-case>
+			<from-outcome>Listado</from-outcome>
+			<to-view-id>/listarUsuario.xhtml</to-view-id>
+		</navigation-case>
+	
+		<navigation-case>
+			<from-outcome>Modificar</from-outcome>
+			<to-view-id>/modificarUsuario.xhtml</to-view-id>
+		</navigation-case>
+	
+			<navigation-case>
+			<from-outcome>EliminarNivel</from-outcome>
+			<to-view-id>/eliminarNivel.xhtml</to-view-id>
+		</navigation-case>
+		
+			<navigation-case>
+			<from-outcome>AltaNivel</from-outcome>
+			<to-view-id>/altaNivel.xhtml</to-view-id>
+		</navigation-case>
+		
+		<navigation-case>
+			<from-outcome>ListaArticulo</from-outcome>
+			<to-view-id>/listaArticulos.xhtml</to-view-id>
+		</navigation-case>
+		
+		
+	</navigation-rule>
+
+</faces-config>

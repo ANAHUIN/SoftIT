@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" >
+
+	<h:head></h:head>
+	<h:body>
+		<h:form>
+		<p:dataTable value="#{usuario.usuariosmodel}" var="u" border="1">
+		<f:facet name="header">Modificar de Usuarios</f:facet>
+		<p:column headerText="Usuario">
+		 #{u.usernom}
+		</p:column>
+		<p:column headerText="Password">
+		#{u.userpwd}
+		</p:column>
+		<p:column headerText="Nombre">
+		 #{u.nombre}
+		</p:column>
+		<p:column headerText="Correo">
+		#{u.correo}
+		</p:column>
+		<p:column headerText="Nivel de Usuario">
+		#{u.nivel.idnivel}
+		</p:column>
+		<p:column headerText="">
+		<h:commandLink value="Modificar" action="Alta" actionListener="#{usuario.buscar}">
+		<f:attribute name="unom" value="#{u.usernom}"></f:attribute>
+		</h:commandLink>
+		</p:column>
+		</p:dataTable>
+		<p:commandLink value="Regresar al Menu" action="SUCCESS"></p:commandLink>
+		
+		
+		
+		</h:form>
+			
+
+											
+		</h:body>
+</html>

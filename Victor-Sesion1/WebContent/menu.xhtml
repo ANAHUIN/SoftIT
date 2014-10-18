@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" >
+
+	<h:head></h:head>
+	<h:body>
+		<h:form>
+			
+		 <p:growl id="messages" showDetail="true"/>
+ 
+    <p:menuButton value="Options">
+        <p:menuitem value="Alta Usuario" action="Alta" update="messages" icon="ui-icon-disk"/>
+        <p:menuitem value="Modificar Usuario" action="Modificar" update="messages" icon="ui-icon-arrowrefresh-1-w"/>
+        <p:menuitem value="Eliminar Usuario" action="Eliminar"  icon="ui-icon-close"/>
+        <p:menuitem value="Listar Usuario" action="Listado" icon="ui-icon-grip-dotted-vertical"/>
+        <p:menuitem value="Eliminar Nivel" action="EliminarNivel" icon="ui-icon-grip-dotted-vertical"/>
+         <p:menuitem value="Alta Nivel" action="AltaNivel" icon="ui-icon-grip-dotted-vertical"/>
+         <p:menuitem value="Lista Articulo" action="ListaArticulo" icon="ui-icon-grip-dotted-vertical"/>
+        <p:separator />
+        <p:menuitem value="Homepage" action="logueo" icon="ui-icon-extlink"/>
+    </p:menuButton>
+		
+		</h:form>
+											
+		</h:body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" >
+
+	<h:head></h:head>
+	<h:body>
+		<h:form>
+		
+		<p:dataTable value="#{nivel.nivelesmodel}" var="n" border="1">
+		<f:facet name="header">Roles de Usuarios</f:facet>
+		<p:column headerText="IdNivel">
+		#{n.idnivel}
+		</p:column>
+		<p:column headerText="Descripción Nivel">
+		#{n.niveldes}	
+		</p:column>
+			
+		</p:dataTable>
+		
+		<p:panelGrid columns="2" >
+		<f:facet name="header">Alta Rol Niveles</f:facet>
+			<h:outputText value="IdNivel"></h:outputText>
+			<p:inputText value="#{nivel.idnivel}"></p:inputText>
+			
+			<h:outputText value="Descripción"></h:outputText>
+			<h:inputSecret value="#{nivel.niveldes}"></h:inputSecret>
+		
+			
+			<p:commandButton value="Grabar"  action="SUCCESS" actionListener="#{nivel.altaNivel}" ></p:commandButton>
+			<p:commandLink value="Regresar al Menu" action="SUCCESS"></p:commandLink>
+		
+		</p:panelGrid>
+		</h:form>
+											
+		</h:body>
+</html>

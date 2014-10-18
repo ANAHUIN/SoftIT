@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" >
+
+	<h:head></h:head>
+	<h:body>
+		<h:form>
+			
+		<p:panelGrid columns="2" >
+		<f:facet name="header">Alta de Usuarios</f:facet>
+			<h:outputText value="usuario"></h:outputText>
+			<h:inputText value="#{usuario.usernom}"></h:inputText>
+			
+			<h:outputText value="password"></h:outputText>
+			<h:inputSecret value="#{usuario.userpwd}"></h:inputSecret>
+		
+			<h:outputText value="nombre"></h:outputText>
+			<h:inputText value="#{usuario.nombre}"></h:inputText>
+			
+			<h:outputText value="correo"></h:outputText>
+			<h:inputText value="#{usuario.correo}"></h:inputText>
+			
+			<h:outputText value="nivel"></h:outputText>
+			<h:selectOneMenu value="#{usuario.idnivel}">
+			<f:selectItems value="#{nivel.nivelSelectItems}"></f:selectItems>
+			</h:selectOneMenu>
+			
+			<h:outputText value="estado"></h:outputText>
+			<h:inputText value="#{usuario.estado}"></h:inputText>
+			
+			<p:commandButton value="Grabar"  action="SUCCESS" actionListener="#{usuario.altaUsuario}" ></p:commandButton>
+			<p:commandLink value="Regresar al Menu" action="SUCCESS"></p:commandLink>
+		
+		</p:panelGrid>
+		</h:form>
+											
+		</h:body>
+</html>

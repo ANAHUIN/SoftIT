@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" 
+	>
+	
+	
+	<h:head></h:head>
+	<h:body>
+			
+	
+	<p:growl id="growl" sticky="true" showDetail="true"></p:growl>
+		<h:form>
+		<p:panelGrid columns="2" style="position: absolute; top :250px left:500px">
+		<f:facet name="header">Login</f:facet>
+		<p:inputText value="#{usuario.usernom}"></p:inputText>
+
+			<p:inputMask value="#{usuario.userpwd}"></p:inputMask>
+						
+			<p:commandButton value="Ingresar" action="#{usuario.validar}"></p:commandButton>
+			<p:commandButton value="Registrase" action="REGISTRARSE"></p:commandButton >		
+		
+		</p:panelGrid>
+		</h:form>
+		
+
+	
+	</h:body>
+	
+	
+	
+</html>

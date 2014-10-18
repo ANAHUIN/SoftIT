@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14128848094010" configfile="/Victor-Sesion1/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="*" id="pf14128856784601" outlinks="pf14130058932722 pf14130064586664 pf14133394067170 pf14133394067171 pf14133458432960 pf14133470520902 pf14133509803854 pf14134372638800 pf14134850698980 pf14134954685892" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="registroUsuario.xhtml" id="pf14130058932723" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf14130058932722" path="/registroUsuario.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="logueo.xhtml" id="pf14130064586665" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf14130064586664" path="/logueo.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="eliminarUsuario.xhtml" id="pf14133144820062" referenceLink="//@navigationRule.0/@navigationCase.4/@toViewId|" inlinks="pf14133394067170" path="/eliminarUsuario.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="listarUsuario.xhtml" id="pf14133394067172" referenceLink="//@navigationRule.0/@navigationCase.5/@toViewId|" inlinks="pf14133394067171" path="/listarUsuario.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="menu.xhtml" id="pf14133458432961" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14133458432960" path="/menu.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="altaUsuario.xhtml" id="pf14133470520903" referenceLink="//@navigationRule.0/@navigationCase.3/@toViewId|" inlinks="pf14133470520902" path="/altaUsuario.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="modificarUsuario.xhtml" id="pf14133509803855" referenceLink="//@navigationRule.0/@navigationCase.6/@toViewId|" inlinks="pf14133509803854" path="/modificarUsuario.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="eliminarNivel.xhtml" id="pf14134372638801" referenceLink="//@navigationRule.0/@navigationCase.7/@toViewId|" inlinks="pf14134372638800" path="/eliminarNivel.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="altaNivel.xhtml" id="pf14134850698981" referenceLink="//@navigationRule.0/@navigationCase.8/@toViewId|" inlinks="pf14134850698980" path="/altaNivel.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="listaArticulo.xhtml" id="pf14134954685893" referenceLink="//@navigationRule.0/@navigationCase.9/@toViewId|" inlinks="pf14134954685892" path="/listaArticulos.xhtml"/>
+  <links id="pf14130058932722" target="pf14130058932723" source="pf14128856784601" outcome="REGISTRARSE"/>
+  <links id="pf14130064586664" target="pf14130064586665" source="pf14128856784601" outcome="Logueo"/>
+  <links id="pf14133394067170" target="pf14133144820062" source="pf14128856784601" outcome="Eliminar"/>
+  <links id="pf14133394067171" target="pf14133394067172" source="pf14128856784601" outcome="Listado"/>
+  <links id="pf14133458432960" target="pf14133458432961" source="pf14128856784601" outcome="SUCCESS"/>
+  <links id="pf14133470520902" target="pf14133470520903" source="pf14128856784601" outcome="Alta"/>
+  <links id="pf14133509803854" target="pf14133509803855" source="pf14128856784601" outcome="Modificar"/>
+  <links id="pf14134372638800" target="pf14134372638801" source="pf14128856784601" outcome="EliminarNivel"/>
+  <links id="pf14134850698980" target="pf14134850698981" source="pf14128856784601" outcome="AltaNivel"/>
+  <links id="pf14134954685892" target="pf14134954685893" source="pf14128856784601" outcome="ListaArticulo"/>
+</pageflow:Pageflow>
